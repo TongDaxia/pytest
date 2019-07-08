@@ -5,7 +5,12 @@ os.chdir('E:/backup')  # 更改工作目录
 
 start = time.time()
 #arr = ts.get_hist_data('600848') #一次性获取全部日k线数据
-df = ts.get_stock_basics()
+
+# pro = ts.pro_api()
+# df = pro.stock_basic()
+
+df = ts.get_stock_basics() #获取所有股票列表
+
 #直接保存
 df.to_csv('stock.csv')
 print(df)
